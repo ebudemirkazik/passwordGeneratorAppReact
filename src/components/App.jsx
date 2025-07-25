@@ -1,5 +1,7 @@
 import "./App.css";
 import PasswordGenerator from "./PasswordGenerator";
+import React from 'react';
+import { useState } from 'react';
 
 function App() {
   return (
