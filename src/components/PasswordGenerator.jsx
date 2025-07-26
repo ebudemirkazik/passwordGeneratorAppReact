@@ -42,9 +42,12 @@ function PasswordGenerator() {
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md ">
-      <h1 className="text-2x1 font-bold mb-4 text-gray-800">
-        Password Generator
-      </h1>
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4 text-gray-800">
+          Password Generator
+        </h1>
+      </div>
+
       <PasswordLengthInput length={length} setLength={setLength} />
       <CheckboxGroup
         includeLowercase={includeLowercase}
