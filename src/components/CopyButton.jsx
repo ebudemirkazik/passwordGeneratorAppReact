@@ -1,17 +1,17 @@
 function CopyButton({ text }) {
   const handleCopy = () => {
     if (!text) {
-      alert("Lütfen önce bir şifre oluşturun!");
+      alert("Please generate a password first!");
       return;
     }
 
     navigator.clipboard
       .writeText(text)
       .then(() => {
-        alert("Şifre Kopyalandı!");
+        alert("Password Copied!");
       })
       .catch((err) => {
-        console.error("Kopyalama Başarısız!", err);
+        console.error("Copy Failed!", err);
       });
   };
 

@@ -7,7 +7,7 @@ function PasswordOutput({ generatedPassword }) {
         </span>
       ) : (
         <span className="text-gray-800 p-3 text-center items-center">
-          Henüz şifre oluşturulmadı
+          No password generated yet!
         </span>
       )}
     </div>

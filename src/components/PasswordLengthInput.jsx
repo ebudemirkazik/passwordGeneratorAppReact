@@ -4,7 +4,7 @@ function PasswordLenghtInput({ length, setLength }) {
     if (value >= 4 && value <= 50) {
       setLength(value);
     } else {
-      alert("Lütfen 4 ile 50 arasında bir değer giriniz.");
+      alert("Please enter a value between 4 and 50 !");
       setLength(12);
     }
   };

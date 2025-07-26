@@ -39,7 +39,7 @@ function PasswordGenerator() {
     if (includeSymbols) characterPool += symbolChars;
 
     if (characterPool.length === 0) {
-      alert("Lütfen en az bir karakter tipi seçiniz.");
+      alert("Please select at least one character type!");
       return;
     }
 

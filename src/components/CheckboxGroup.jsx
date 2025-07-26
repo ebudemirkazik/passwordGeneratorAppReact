@@ -13,25 +13,25 @@ function CheckboxGroup({
   return (
     <div className="mb-4 space-y-2">
       <CustomCheckbox
-        label="Küçük Harf (a-z)"
+        label="Lowercase (a-z)"
         checked={includeLowercase}
         onChange={setIncludeLowercase}
       />
 
       <CustomCheckbox
-        label="Büyük Harf (A-Z)"
+        label="Uppercase (A-Z)"
         checked={includeUppercase}
         onChange={setIncludeUppercase}
       />
 
       <CustomCheckbox
-        label="Rakamlar (0-9)"
+        label="Numbers (0-9)"
         checked={includeNumbers}
         onChange={setIncludeNumbers}
       />
 
       <CustomCheckbox
-        label="Semboller (!@#$)"
+        label="Symbols (!@#$)"
         checked={includeSymbols}
         onChange={setIncludeSymbols}
       />

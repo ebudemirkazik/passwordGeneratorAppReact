@@ -14,7 +14,7 @@ function SavedPasswords({ passwords, onClear }) {
 
   return (
     <div className="mt-6">
-      <h3 className="text-lg font-semibold mb-2">Kayıtlı Şifreler</h3>
+      <h3 className="text-lg font-semibold mb-2">Saved Passwords</h3>
       <button
         onClick={onClear}
         className="text-sm text-red-600 hover:underline"
