@@ -4,6 +4,7 @@ import PasswordLengthInput from "./PasswordLengthInput";
 import CheckboxGroup from "./CheckboxGroup";
 import PasswordOutput from "./PasswordOutput";
 import GenerateButton from "./GenerateButton";
+import CopyButton from "./CopyButton";
 
 function PasswordGenerator() {
   const [length, setLength] = useState(12);
@@ -40,7 +41,7 @@ function PasswordGenerator() {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+    <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md ">
       <h1 className="text-2x1 font-bold mb-4 text-gray-800">
         Password Generator
       </h1>
@@ -59,6 +60,8 @@ function PasswordGenerator() {
       <GenerateButton onClick={generatePassword} />
 
       <PasswordOutput generatedPassword={generatedPassword} />
+
+      <CopyButton text={generatedPassword} />
     </div>
   );
 }

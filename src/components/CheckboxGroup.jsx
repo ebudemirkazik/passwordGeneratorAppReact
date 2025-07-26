@@ -1,3 +1,5 @@
+import CustomCheckbox from "./CustomCheckbox";
+
 function CheckboxGroup({
   includeLowercase,
   setIncludeLowercase,
@@ -10,45 +12,29 @@ function CheckboxGroup({
 }) {
   return (
     <div className="mb-4 space-y-2">
-      <label className="flex items-center space-x-2 text-gray-700">
-        <input
-          type="checkbox"
-          className="accent-blue-500"
-          checked={includeLowercase}
-          onChange={(e) => setIncludeLowercase(e.target.checked)}
-        />
-        <span>Küçük Harf (a-z)</span>
-      </label>
+      <CustomCheckbox
+        label="Küçük Harf (a-z)"
+        checked={includeLowercase}
+        onChange={setIncludeLowercase}
+      />
 
-      <label className="flex items-center space-x-2 text-gray-700">
-        <input
-          type="checkbox"
-          className="accent-blue-500"
-          checked={includeUppercase}
-          onChange={(e) => setIncludeUppercase(e.target.checked)}
-        />
-        <span>Büyük Harf (A-Z)</span>
-      </label>
+      <CustomCheckbox
+        label="Büyük Harf (A-Z)"
+        checked={includeUppercase}
+        onChange={setIncludeUppercase}
+      />
 
-      <label className="flex items-center space-x-2 text-gray-700">
-        <input
-          type="checkbox"
-          className="accent-blue-500"
-          checked={includeNumbers}
-          onChange={(e) => setIncludeNumbers(e.target.checked)}
-        />
-        <span>Rakamlar (0-9)</span>
-      </label>
+      <CustomCheckbox
+        label="Rakamlar (0-9)"
+        checked={includeNumbers}
+        onChange={setIncludeNumbers}
+      />
 
-      <label className="flex items-center space-x-2 text-gray-700">
-        <input
-          type="checkbox"
-          className="accent-blue-500"
-          checked={includeSymbols}
-          onChange={(e) => setIncludeSymbols(e.target.checked)}
-        />
-        <span>Semboller (!@#$)</span>
-      </label>
+      <CustomCheckbox
+        label="Semboller (!@#$)"
+        checked={includeSymbols}
+        onChange={setIncludeSymbols}
+      />
     </div>
   );
 }
