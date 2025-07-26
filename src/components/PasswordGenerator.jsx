@@ -21,6 +21,11 @@ function PasswordGenerator() {
     if (stored) setSavedPasswords(stored);
   }, []);
 
+  const handleClearPasswords = () => {
+    localStorage.removeItem("passwords");
+    setSavedPasswords([]);
+  };
+
   const generatePassword = () => {
     let characterPool = "";
     const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
@@ -76,7 +81,10 @@ function PasswordGenerator() {
       <PasswordOutput generatedPassword={generatedPassword} />
 
       <CopyButton text={generatedPassword} />
-      <SavedPasswords passwords={savedPasswords} />
+      <SavedPasswords
+        passwords={savedPasswords}
+        onClear={handleClearPasswords}
+      />
     </div>
   );
 }
