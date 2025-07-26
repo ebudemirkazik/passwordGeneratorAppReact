@@ -1,12 +1,60 @@
-# React + Vite
+# 🔐 Password Generator App (React + Tailwind)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and elegant password generator built with **React** and styled using **Tailwind CSS**.  
+This app allows users to generate secure passwords, customize password options, and store recent passwords locally.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## Expanding the ESLint configuration
+- ✅ Choose password length (up to 50 characters)
+- ✅ Include lowercase, uppercase, numbers, and symbols
+- ✅ Copy to clipboard functionality
+- ✅ Save and display up to 10 previous passwords
+- ✅ Clear all saved passwords
+- ✅ Responsive design with Tailwind CSS
+- ✅ Smooth UX with visual feedback
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧩 Technologies Used
+
+- **React** (Vite)
+- **Tailwind CSS**
+- **Local Storage**
+- **React Icons**
+
+---
+
+## 📸 Screenshots
+
+> 📷 See the `/assets/screenshots/` folder for app previews.  
+App UI includes password input settings, generated result display, and history list.
+
+---
+
+## 🧠 How It Works
+
+1. Select password length using the slider
+2. Choose which character types to include
+3. Click **Generate Password**
+4. Password is shown and saved
+5. You can copy it with a single click or clear saved ones
+
+---
+
+## 🗂 Project Structure (src/)
+
+```bash
+src/
+├── components/
+│   ├── PasswordLengthInput.jsx
+│   ├── CheckboxGroup.jsx
+│   ├── GenerateButton.jsx
+│   ├── PasswordOutput.jsx
+│   ├── CopyButton.jsx
+│   ├── SavedPasswords.jsx
+│   └── CustomCheckbox.jsx
+├── PasswordGenerator.jsx
+├── App.jsx
+└── main.jsx
