@@ -1,18 +1,25 @@
-import React, { use } from "react";
+import React, { use, useEffect } from "react";
 import { useState } from "react";
 import PasswordLengthInput from "./PasswordLengthInput";
 import CheckboxGroup from "./CheckboxGroup";
 import PasswordOutput from "./PasswordOutput";
 import GenerateButton from "./GenerateButton";
 import CopyButton from "./CopyButton";
+import SavedPasswords from "./SavedPasswords";
 
 function PasswordGenerator() {
   const [length, setLength] = useState(12);
+  const [savedPasswords, setSavedPasswords] = useState([]);
   const [includeLowercase, setIncludeLowercase] = useState(true);
   const [includeUppercase, setIncludeUppercase] = useState(true);
   const [includeNumbers, setIncludeNumbers] = useState(true);
   const [includeSymbols, setIncludeSymbols] = useState(false);
   const [generatedPassword, setGeneratedPassword] = useState("");
+
+  useEffect(() => {
+    const stored = JSON.parse(localStorage.getItem("passwords"));
+    if (stored) setSavedPasswords(stored);
+  }, []);
 
   const generatePassword = () => {
     let characterPool = "";
@@ -38,6 +45,10 @@ function PasswordGenerator() {
       password += characterPool[randomIndex];
     }
     setGeneratedPassword(password);
+
+    const updatedPasswords = [password, ...savedPasswords].slice(0, 10);
+    setSavedPasswords(updatedPasswords);
+    localStorage.setItem("passwords", JSON.stringify(updatedPasswords));
   };
 
   return (
@@ -65,6 +76,7 @@ function PasswordGenerator() {
       <PasswordOutput generatedPassword={generatedPassword} />
 
       <CopyButton text={generatedPassword} />
+      <SavedPasswords passwords={savedPasswords} />
     </div>
   );
 }
