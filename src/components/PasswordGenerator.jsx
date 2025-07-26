@@ -63,7 +63,6 @@ function PasswordGenerator() {
           Password Generator
         </h1>
       </div>
-
       <PasswordLengthInput length={length} setLength={setLength} />
       <CheckboxGroup
         includeLowercase={includeLowercase}
@@ -75,11 +74,8 @@ function PasswordGenerator() {
         includeSymbols={includeSymbols}
         setIncludeSymbols={setIncludeSymbols}
       />
-
       <GenerateButton onClick={generatePassword} />
-
       <PasswordOutput generatedPassword={generatedPassword} />
-
       <CopyButton text={generatedPassword} />
       <SavedPasswords
         passwords={savedPasswords}
